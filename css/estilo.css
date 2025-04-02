@@ -1,0 +1,79 @@
+/*regra css*/
+
+/* identeção alt + shift + F */
+/* comentário alt + shif + A */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*  */
+    scrollbar-width: thin;
+    scrollbar-color: red;
+    border: 1px;
+}
+
+body {
+    background-color: rgb(39,39,39);
+    
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html[data-teme='dark'] .logo1 {
+    filter: invert(1);
+ }
+
+ #header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px; /* é possível colocar dois valores em uma so linha em vez de criar mais outras */
+
+    
+ }
+
+ /* logo1 */
+ .logo1 {
+    /* se o valor estiver em rem tem q multiplicar por 16 */
+    width: 56px; /* comprimento */
+    height: 56px; /* altura */ /* auto */
+ }
+
+ .header-toggle {
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ #toggleTheme {
+    color: whitesmoke; /* cor de texto */
+    font-size: 20px; /* tamanho da fonte entre 16 ~ 20*/
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+ }
+
+ /* menu desktop */
+ .menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+ }
+/* letra maiuscula */
+ .menu-item {
+    width: 100%;
+ }
+
+ .menu-link {
+    display: flex;
+    text-transform: uppercase;
+ }
+ 
