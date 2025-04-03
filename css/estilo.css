@@ -1,3 +1,28 @@
+/* Google fontes */
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=DynaPuff:wght@400..700&family=Rozha+One&display=swap');
+
+/* 
+Root fontes
+
+Rozha One:
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+
+Akaya Kanadaka: 
+  font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+DynaPuff:
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+*/
 /*regra css*/
 
 /* identeção alt + shift + F */
@@ -73,7 +98,49 @@ html[data-teme='dark'] .logo1 {
  }
 
  .menu-link {
-    display: flex;
-    text-transform: uppercase;
+    display: flex; 
  }
+ /* span dentro do a href */
+ /* incluindo a fonte das letras - buscar no google fontes */
+ .menu-texto {
+   font-size: 12px;
+   text-transform: uppercase;
+   font-family: "DynaPuff", system-ui;
+ }
+
+.header-nav {/* menu desktop */
+   display: none;
+
+}
+
+.menu-mobile .menu-link {
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 8px 16px;
+   
+}
+
+.menu-mobile {
+   bottom: 0;
+   position: fixed;
+}
+
+ /* css responsivo */
+ /* telas a partir de 768px */
+ @media (min-width: 768px) {
+   .header-nav {
+      display: flex;
+   }
+   .header-nav,
+   .header-togger {
+      min-width: 20; /* width tela a partir de 768px até valor infinito*/
+   }
+   .nav-mobile {
+      display: none;
+   }
+ }
+
+
+ 
  
