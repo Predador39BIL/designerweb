@@ -39,6 +39,7 @@ DynaPuff:
 
 body {
     background-color: rgb(39,39,39);
+    color: whitesmoke;
     
 }
 
@@ -106,6 +107,7 @@ html[data-teme='dark'] .logo1 {
    font-size: 12px;
    text-transform: uppercase;
    font-family: "DynaPuff", system-ui;
+   font-weight: 300;
  }
 
 .header-nav {/* menu desktop */
@@ -124,7 +126,31 @@ html[data-teme='dark'] .logo1 {
 .menu-mobile {
    bottom: 0;
    position: fixed;
+   width: 100vw; /* VW = viewPort - width */
+   justify-content: space-between;
+   border-top: 1px solid #989898;
+   z-index: 1;
 }
+
+ .menu-link.active .menu-icone, 
+ .menu-link.active .menu-texto,
+ .menu-link:hover .menu-icone,
+ .menu-link:hover .menu-texto {
+   color: red;
+   font-weight: 600;
+ }
+
+ .icone-link,
+ .menu-texto {
+   color: #6a6a6a;
+   font-weight: 600;
+ }
+
+ .icone-link {
+   font-size: 25px;
+ }
+
+
 
  /* css responsivo */
  /* telas a partir de 768px */
@@ -133,14 +159,14 @@ html[data-teme='dark'] .logo1 {
       display: flex;
    }
    .header-nav,
-   .header-togger {
-      min-width: 20; /* width tela a partir de 768px até valor infinito*/
+   .header-toggle {
+      min-width: 20%; /* width tela a partir de 768px até valor infinito*/
    }
    .nav-mobile {
       display: none;
    }
+ 
  }
-
 
  
  
