@@ -1,6 +1,25 @@
 /* Google fontes */
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=DynaPuff:wght@400..700&family=Rozha+One&display=swap');
 
+
+/* Variáveis de cores */
+
+/* Definir cores tema Dark */
+
+:root,
+:root[data-theme="dark"] {
+
+    --fundo-header: yellow;
+}
+
+
+/* Definir cores tema Light */
+:root[data-theme="light"] {
+
+    --fundo-header: green;
+}
+
+
 /* 
 Root fontes
 
@@ -149,6 +168,7 @@ html[data-teme='dark'] .logo1 {
    
 }
 
+/* Menu Mobile */
 .menu-mobile {
    bottom: 0;
    position: fixed;
@@ -156,6 +176,7 @@ html[data-teme='dark'] .logo1 {
    justify-content: space-between;
    border-top: 1px solid #989898;
    z-index: 1;
+   background: rgb(39,39,39);
 }
 
  .menu-link.active .menu-icone, 
@@ -223,14 +244,44 @@ html[data-teme='dark'] .logo1 {
    transition: all ease-in-out  .5s;
  }
 
+ .btn:hover span,
+ .btn:hover i {
+    color: red;
+ }
+
+ .icon-social {
+  font-size: 22px;
+  color: #989898;
+ }
+
+ .icon-social:hover {
+  color: rgb(39,39,39);
+  background: #ffffff;
+ }
+
+ /* Estrutura */
+ /* # é ID e . Classe */
+
+ /* ATUALIZAÇÕES FUTURAS */
+ #home {
+  padding: 40px 16px;
+ }
 
 
  /* css responsivo */
  /* telas a partir de 768px */
  @media (min-width: 768px) {
+   
+    #header {
+    background-color: var(--fundo-header);
+    position: fixed;
+    border-bottom: 1px solid rgb (#989898);
+    padding:  16px 96px;
+    }
+
    .header-nav {
       display: flex;
-   }
+    }
    .header-nav,
    .header-toggle {
       min-width: 20%; /* width tela a partir de 768px até valor infinito*/
@@ -238,8 +289,22 @@ html[data-teme='dark'] .logo1 {
    .nav-mobile {
       display: none;
    }
+
+   #home { /* Atualização futura */
+    padding: 128px 96px 64px;
+    
+   }
+   .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   }
  
  }
 
- 
- 
+/* 1200 pixels */ 
+ @media (min-width: 1200px) {
+  #home {
+    padding: 160px 96px 32px;
+    }
+ }
