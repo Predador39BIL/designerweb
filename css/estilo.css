@@ -60,12 +60,6 @@ DynaPuff:
     border: 1px;
 }
 
-body {
-    background-color: var(--bg);
-    color: var(--color);
-    
-}
-
 a {
     color: var(--color);
     text-decoration: none;
@@ -78,6 +72,15 @@ ul {
 html[data-theme='dark'] .logo1 {
     filter: invert(1);
  }
+
+html {
+  scroll-behavior: smooth;
+} 
+
+body {
+  background-color: var(--bg);
+  color: var(--color); 
+}
 
  h1 {
    font-size: 40px;
