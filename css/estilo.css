@@ -9,14 +9,18 @@
 :root,
 :root[data-theme="dark"] {
 
-    --fundo-header: yellow;
+   --bg: rgb(39, 39, 39);/* Cor de Fundo */
+   --color:  rgb(206, 206, 206);/* Cor de Textos */
+   --hover: rgb(243, 243, 243);
 }
 
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
 
-    --fundo-header: green;
+    --bg: rgb(206, 206, 206);/* Cor de Fundo */
+    --color: rgb(39, 39, 39);/* Cor de Textos */
+    --hover: rgb(5, 5, 5,);
 }
 
 
@@ -52,18 +56,18 @@ DynaPuff:
     padding: 0;
     box-sizing: border-box;/*  */
     scrollbar-width: thin;
-    scrollbar-color: red;
+    scrollbar-color: thin;
     border: 1px;
 }
 
 body {
-    background-color: rgb(39,39,39);
-    color: whitesmoke;
+    background-color: var(--bg);
+    color: var(--color);
     
 }
 
 a {
-    color: whitesmoke;
+    color: var(--color);
     text-decoration: none;
 }
 
@@ -71,7 +75,7 @@ ul {
     list-style: none;
 }
 
-html[data-teme='dark'] .logo1 {
+html[data-theme='dark'] .logo1 {
     filter: invert(1);
  }
 
@@ -108,7 +112,6 @@ html[data-teme='dark'] .logo1 {
     align-items: center;
     width: 100%;
     padding: 10px 20px; /* é possível colocar dois valores em uma so linha em vez de criar mais outras */
-
     
  }
 
@@ -125,7 +128,7 @@ html[data-teme='dark'] .logo1 {
  }
 
  #toggleTheme {
-    color: whitesmoke; /* cor de texto */
+    color: var(--color); /* cor de texto */
     font-size: 20px; /* tamanho da fonte entre 16 ~ 20*/
     cursor: pointer;
     transition: all 0.6s ease-in-out;
@@ -174,16 +177,16 @@ html[data-teme='dark'] .logo1 {
    position: fixed;
    width: 100vw; /* VW = viewPort - width */
    justify-content: space-between;
-   border-top: 1px solid #989898;
+   border-top: 1px solid var(--color);
    z-index: 1;
-   background: rgb(39,39,39);
+   background: var(--bg);
 }
 
  .menu-link.active .menu-icone, 
  .menu-link.active .menu-texto,
  .menu-link:hover .menu-icone,
  .menu-link:hover .menu-texto {
-   color: red;
+   color: var(--hover);
    font-weight: 600;
  }
 
@@ -230,40 +233,43 @@ html[data-teme='dark'] .logo1 {
  }
 
  .btn-primary {
-      border: 1px solid white;
+      border: 1px solid var(--color);
+ }
+ .btn-primary:hover{
+      border: 1px solid var(--bg);
  }
 
  .btn span,
  .btn i {
-   color: #fff;
+   color: var(--color);
    font-size: 18px;
  }
 
  .btn:hover {
-   transform: scale(1.02);
+   transform: scale(1.10);
    transition: all ease-in-out  .5s;
  }
 
  .btn:hover span,
  .btn:hover i {
-    color: red;
+    color: var(--hover);
  }
 
  .icon-social {
-  font-size: 22px;
-  color: #989898;
+  font-size: 25px;
+  color: rgb grey;
  }
 
  .icon-social:hover {
-  color: rgb(39,39,39);
-  background: #ffffff;
+  color: var(--hover);
+  
  }
 
  /* Estrutura */
  /* # é ID e . Classe */
 
  /* ATUALIZAÇÕES FUTURAS */
- #home {
+ #home, .projetos {
   padding: 40px 16px;
  }
 
@@ -273,9 +279,9 @@ html[data-teme='dark'] .logo1 {
  @media (min-width: 768px) {
    
     #header {
-    background-color: var(--fundo-header);
+    background-color: var(--bg);
     position: fixed;
-    border-bottom: 1px solid rgb (#989898);
+    border-bottom: 1px solid #989898;
     padding:  16px 96px;
     }
 
@@ -290,7 +296,7 @@ html[data-teme='dark'] .logo1 {
       display: none;
    }
 
-   #home { /* Atualização futura */
+   #home, .projetos { /* Atualização futura */
     padding: 128px 96px 64px;
     
    }
@@ -307,4 +313,27 @@ html[data-teme='dark'] .logo1 {
   #home {
     padding: 160px 96px 32px;
     }
+
+  h2 {
+    font-size: 65px;
+  }
+
+  p, span, li {
+    font-size: 20px; /* pode varias de 20px a 26px */
+  }
+ }
+ /* Fim da 1200px */
+
+ /* inicio da 1400px */
+ @media (min-width: 1400px) {
+  h1 {
+      font-size: 100px;
+  }
+  h2 {
+      font-size: 80px;
+  }
+  .projetos {
+      padding: 160px 240px 64px;
+  }
+
  }
