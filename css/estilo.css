@@ -9,18 +9,25 @@
 :root,
 :root[data-theme="dark"] {
 
-   --bg: rgb(39, 39, 39);/* Cor de Fundo */
-   --color:  rgb(206, 206, 206);/* Cor de Textos */
-   --hover: rgb(243, 243, 243);
+  --bg: rgb(39, 39, 39);
+  /* Cor de Fundo */
+  --color: rgb(206, 206, 206);
+  /* Cor de Textos */
+  --hover: rgb(243, 243, 243);
+  --sombra: rgb(226, 226, 226);
 }
 
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
 
-    --bg: rgb(206, 206, 206);/* Cor de Fundo */
-    --color: rgb(39, 39, 39);/* Cor de Textos */
-    --hover: rgb(5, 5, 5,);
+  --bg: rgb(206, 206, 206);
+  /* Cor de Fundo */
+  --color: rgb(39, 39, 39);
+  /* Cor de Textos */
+  --hover: rgb(5, 5, 5, );
+  --sombra: rgb(37, 37, 37);
+
 }
 
 
@@ -51,292 +58,399 @@ DynaPuff:
 /* identeção alt + shift + F */
 /* comentário alt + shif + A */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;/*  */
-    scrollbar-width: thin;
-    scrollbar-color: thin;
-    border: 1px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*  */
+  scrollbar-width: thin;
+  scrollbar-color: thin;
+  border: 1px;
 }
 
 a {
-    color: var(--color);
-    text-decoration: none;
+  color: var(--color);
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 html[data-theme='dark'] .logo1 {
-    filter: invert(1);
- }
+  filter: invert(1);
+}
 
 html {
   scroll-behavior: smooth;
-} 
+}
 
 body {
   background-color: var(--bg);
-  color: var(--color); 
+  color: var(--color);
 }
 
- h1 {
-   font-size: 40px;
-   font-weight: 500;
-   font-family: "outfit", sans-serif;
-   letter-spacing: 3px;
- }
+h1 {
+  font-size: 40px;
+  font-weight: 200;
+  font-family: "outfit", sans-serif;
+  letter-spacing: 3px;
 
- p, 
- li, 
- span {
-      font-size: 18px;
- }
+}
 
- p {
-   text-align: justify;
-   font-family: "inter" , sans-serif;
- }
+h2 {
+  font-size: 35px;
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
 
- strong {
-   font-weight: 800;
- }
+}
+
+h3 {
+  font-size: 25px;
+  font-family: "outfit", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: left;
+  text-transform: uppercase;
+
+}
+
+p,
+li,
+span {
+  font-size: 18px;
+}
+
+p {
+  text-align: justify;
+  font-family: "inter", sans-serif;
+}
+
+strong {
+  font-weight: 800;
+}
 
 
 
 /* Header */
 
- #header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px; /* é possível colocar dois valores em uma so linha em vez de criar mais outras */
-    
- }
+#header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  /* é possível colocar dois valores em uma so linha em vez de criar mais outras */
 
- /* logo1 */
- .logo1 {
-    /* se o valor estiver em rem tem q multiplicar por 16 */
-    width: 56px; /* comprimento */
-    height: 56px; /* altura */ /* auto */
- }
+}
 
- .header-toggle {
-    display: flex;
-    justify-content: flex-end;
- }
+/* logo1 */
+.logo1 {
+  /* se o valor estiver em rem tem q multiplicar por 16 */
+  width: 56px;
+  /* comprimento */
+  height: 56px;
+  /* altura */
+  /* auto */
+}
 
- #toggleTheme {
-    color: var(--color); /* cor de texto */
-    font-size: 20px; /* tamanho da fonte entre 16 ~ 20*/
-    cursor: pointer;
-    transition: all 0.6s ease-in-out;
- }
+.header-toggle {
+  display: flex;
+  justify-content: flex-end;
+}
 
- /* menu desktop */
- .menu {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+#toggleTheme {
+  color: var(--color);
+  /* cor de texto */
+  font-size: 20px;
+  /* tamanho da fonte entre 16 ~ 20*/
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
 
- }
+/* menu desktop */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+}
+
 /* letra maiuscula */
- .menu-item {
-    width: 100%;
- }
+.menu-item {
+  width: 100%;
+}
 
- .menu-link {
-    display: flex; 
- }
- /* span dentro do a href */
- /* incluindo a fonte das letras - buscar no google fontes */
- .menu-texto {
-   font-size: 12px;
-   text-transform: uppercase;
-   font-family: "DynaPuff", system-ui;
-   font-weight: 300;
- }
+.menu-link {
+  display: flex;
+}
 
-.header-nav {/* menu desktop */
-   display: none;
+/* span dentro do a href */
+/* incluindo a fonte das letras - buscar no google fontes */
+.menu-texto {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "DynaPuff", system-ui;
+  font-weight: 300;
+}
+
+.header-nav {
+  /* menu desktop */
+  display: none;
 
 }
 
 .menu-mobile .menu-link {
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 8px 16px;
-   
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+
 }
 
 /* Menu Mobile */
 .menu-mobile {
-   bottom: 0;
-   position: fixed;
-   width: 100vw; /* VW = viewPort - width */
-   justify-content: space-between;
-   border-top: 1px solid var(--color);
-   z-index: 1;
-   background: var(--bg);
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+  /* VW = viewPort - width */
+  justify-content: space-between;
+  border-top: 1px solid var(--color);
+  z-index: 1;
+  background: var(--bg);
 }
 
- .menu-link.active .menu-icone, 
- .menu-link.active .menu-texto,
- .menu-link:hover .menu-icone,
- .menu-link:hover .menu-texto {
-   color: var(--hover);
-   font-weight: 600;
- }
+.menu-link.active .menu-icone,
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-icone,
+.menu-link:hover .menu-texto {
+  color: var(--hover);
+  font-weight: 600;
+}
 
- .icone-link,
- .menu-texto {
-   color: #6a6a6a;
-   font-weight: 600;
- }
+.icone-link,
+.menu-texto {
+  color: #6a6a6a;
+  font-weight: 600;
+}
 
- .icone-link {
-   font-size: 25px;
- }
- /* fim CSS do menu */
- /* Home / Main */
+.icone-link {
+  font-size: 25px;
+}
 
- #home {
-   display: flex;
-   flex-direction: column;
-   gap: 32px;
- }
+/* fim CSS do menu */
+/* Home / Main */
 
- .main-content {
-   display: flex;
-   flex-direction: column;
-   gap: 25px;
- }
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 
- .video iframe {
-   width: 100%;
-   aspect-ratio: 16/09;
- }
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
- .btn {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 5px;
-   background: transparent;
-   width: 100%;
-   border: none;
-   padding: 8px 10px;
-   border-radius: 10px;
-   cursor: pointer;
- }
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16/09;
+}
 
- .btn-primary {
-      border: 1px solid var(--color);
- }
- .btn-primary:hover{
-      border: 1px solid var(--bg);
- }
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  width: 100%;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
- .btn span,
- .btn i {
-   color: var(--color);
-   font-size: 18px;
- }
+.btn-primary {
+  border: 1px solid var(--color);
+}
 
- .btn:hover {
-   transform: scale(1.10);
-   transition: all ease-in-out  .5s;
- }
+.btn-primary:hover {
+  border: 1px solid var(--bg);
+}
 
- .btn:hover span,
- .btn:hover i {
-    color: var(--hover);
- }
+.btn span,
+.btn i {
+  color: var(--color);
+  font-size: 18px;
+}
 
- .icon-social {
+.btn:hover {
+  transform: scale(1.10);
+  transition: all ease-in-out .5s;
+}
+
+.btn:hover span,
+.btn:hover i {
+  color: var(--hover);
+}
+
+.icon-social {
   font-size: 25px;
   color: rgb grey;
- }
+}
 
- .icon-social:hover {
+.icon-social:hover {
   color: var(--hover);
-  
- }
 
- /* Estrutura */
- /* # é ID e . Classe */
+}
 
- /* ATUALIZAÇÕES FUTURAS */
- #home, .projetos {
+/* Estrutura */
+/* Projetos */
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.projetos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-img {
+  width: 100%;
+  pointer-events: none;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 0px 05px var(--sombra);
+}
+
+.card-description {
+  font-family: "Rozha One", serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.icon-list {
+  color: #05a2e5;
+  font-size: 14px;
+}
+
+.card-item {
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+
+
+/* ATUALIZAÇÕES FUTURAS */
+#home,
+.projetos {
   padding: 40px 16px;
- }
+}
 
 
- /* css responsivo */
- /* telas a partir de 768px */
- @media (min-width: 768px) {
-   
-    #header {
+/* css responsivo */
+/* telas a partir de 768px */
+@media (min-width: 768px) {
+
+  #header {
     background-color: var(--bg);
     position: fixed;
     border-bottom: 1px solid #989898;
-    padding:  16px 96px;
-    }
+    padding: 16px 96px;
+  }
 
-   .header-nav {
-      display: flex;
-    }
-   .header-nav,
-   .header-toggle {
-      min-width: 20%; /* width tela a partir de 768px até valor infinito*/
-   }
-   .nav-mobile {
-      display: none;
-   }
+  .header-nav {
+    display: flex;
+  }
 
-   #home, .projetos { /* Atualização futura */
+  .header-nav,
+  .header-toggle {
+    min-width: 20%;
+    /* width tela a partir de 768px até valor infinito*/
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  #home,
+  .projetos {
+    /* Atualização futura */
     padding: 128px 96px 64px;
-    
-   }
-   .main-content {
+
+  }
+
+  .main-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-   }
- 
- }
+  }
 
-/* 1200 pixels */ 
- @media (min-width: 1200px) {
+}
+
+
+/* Fim 768 */
+
+@media (min-width: 992px) {
+  .projeto-card {
+    flex-direction: row;
+  }
+
+  .card-img {
+    width: 55%;
+  }
+}
+
+/* 1200 pixels */
+@media (min-width: 1200px) {
   #home {
     padding: 160px 96px 32px;
-    }
+  }
 
   h2 {
     font-size: 65px;
   }
 
-  p, span, li {
-    font-size: 20px; /* pode varias de 20px a 26px */
+  p,
+  span,
+  li {
+    font-size: 20px;
+    /* pode variar de 20px a 26px */
   }
- }
- /* Fim da 1200px */
+}
 
- /* inicio da 1400px */
- @media (min-width: 1400px) {
+/* Fim da 1200px */
+
+/* inicio da 1400px */
+@media (min-width: 1400px) {
   h1 {
-      font-size: 100px;
-  }
-  h2 {
-      font-size: 80px;
-  }
-  .projetos {
-      padding: 160px 240px 64px;
+    font-size: 100px;
   }
 
- }
+  h2 {
+    font-size: 80px;
+  }
+
+  .projetos {
+    padding: 160px 240px 64px;
+  }
+}
