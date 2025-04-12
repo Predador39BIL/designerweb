@@ -144,6 +144,7 @@ strong {
   align-items: center;
   width: 100%;
   padding: 10px 20px;
+  z-index: 999999;
   /* é possível colocar dois valores em uma so linha em vez de criar mais outras */
 
 }
@@ -357,6 +358,13 @@ strong {
   margin-bottom: 5px;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+
+}
 
 
 
@@ -368,6 +376,8 @@ strong {
 
 
 /* css responsivo */
+/* min-width = a partir de --» */
+
 /* telas a partir de 768px */
 @media (min-width: 768px) {
 
@@ -410,15 +420,31 @@ strong {
 
 /* Fim 768 */
 
+/* Inicio 992 */
 @media (min-width: 992px) {
   .projeto-card {
     flex-direction: row;
+  }
+
+  .projeto-card.card-reverse {
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+
+  .card-reverse .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
   }
 
   .card-img {
     width: 55%;
   }
 }
+
+/* Fim 992 */
 
 /* 1200 pixels */
 @media (min-width: 1200px) {
@@ -453,4 +479,15 @@ strong {
   .projetos {
     padding: 160px 240px 64px;
   }
+}
+
+/* 0 até 992px */
+@media (max-width: 992px) {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

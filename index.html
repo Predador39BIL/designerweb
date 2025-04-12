@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark"> <!-- shif! -->
+<html lang="pt-br" data-theme="dark"> <!-- "shif!" - cria todo o código até head-->
 
 <head>
   <meta charset="UTF-8">
@@ -14,6 +14,11 @@
 
   <!-- fav icon --> <!-- incluir a pasta img em href -->
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
@@ -55,8 +60,9 @@
       </ul>
 
     </nav><!-- Fim menu Desktop -->
+
     <!-- logo -->
-    <div>
+    <div data-aos="fade-up">
       <a href="#home">
         <img src="img/logo1.svg" alt="" class="logo1">
       </a>
@@ -107,7 +113,7 @@
 
   </nav>
   <main id="home">
-    <div class="main-content">
+    <div class="main-content" data-aos="fade-up" data-aos-delay="600">
 
       <h1>
         <strong>
@@ -162,7 +168,7 @@
         <blockquote class="instagram-media" data-instgrm-captioned
           data-instgrm-permalink="https://www.instagram.com/p/DH2EyNmtyUJ/?utm_source=ig_embed&amp;utm_campaign=loading"
           data-instgrm-version="14"
-          style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+          style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:150px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
           <div style="padding:16px;"> <a
               href="https://www.instagram.com/p/DH2EyNmtyUJ/?utm_source=ig_embed&amp;utm_campaign=loading"
               style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
@@ -304,7 +310,7 @@
       </article>
 
       <!-- Projeto 2 -->
-      <article class="projeto-card">
+      <article class="projeto-card card-reverse">
 
         <img src="img/Automacao-Residencial-sua-casa-conectada.jpg" alt="" class="card-img">
 
@@ -313,25 +319,28 @@
 
           <h3 class="card-title">Loja de Produtos</h3>
           <p class="card-description">
-            Produtos para Automação 
+            Produtos para Automação
           </p>
 
 
           <ul class="card-lista">
 
             <li class="card-item">
-              <i class="icon-list bi bi-chevron-double-right"></i>
-              Automoação Predial
+              Automação Predial
+              <i class="icon-list bi bi-chevron-double-left"></i>
+
             </li>
 
             <li class="card-item">
-              <i class="icon-list bi bi-chevron-double-right"></i>
               Automação Residêncial
+              <i class="icon-list bi bi-chevron-double-left"></i>
+
             </li>
 
             <li class="card-item">
-              <i class="icon-list bi bi-chevron-double-right"></i>
               Casa Conectada
+              <i class="icon-list bi bi-chevron-double-left"></i>
+
             </li>
 
           </ul>
@@ -351,12 +360,11 @@
 
           <h3 class="card-title">Loja de Produtos</h3>
           <p class="card-description">
-            Câmeras de Segurança
+            Sistemas de Segurança
           </p>
 
 
           <ul class="card-lista">
-
 
 
             <li class="card-item">
@@ -376,7 +384,7 @@
 
             <li class="card-item">
               <i class="icon-list bi bi-chevron-double-right"></i>
-              Automatismos
+              Automação
             </li>
 
           </ul>
@@ -390,8 +398,16 @@
   </section>
 
 
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script src="js/script.js"> </script>
+
+  <script>
+    AOS.init({
+      duration: 900,
+    });
+  </script>
 
 </body>
 
