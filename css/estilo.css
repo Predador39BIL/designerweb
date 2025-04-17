@@ -446,6 +446,51 @@ strong {
   gap: 10px;
 }
 
+.row2 .sobre-lista li {
+  margin-bottom: 10px;
+}
+
+/* accordion */
+.accordion-header {
+  width: 100%;
+  border: 1px solid var(--color);
+  display: flex;
+  background: transparent;
+  justify-content: space-between;
+  padding: 8px 16px;
+  align-items: center;
+  transition: ease-in-out .5s;
+}
+
+.accordion-header span {
+  color: var(--color);
+  /* pode usar o texto e caixa alta - text-transform: capitalize; */
+}
+
+.accordion-body {
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--color);
+  display: none;
+}
+
+.accordion-item.active .accordion-header {
+  background: var(--color);
+}
+
+.accordion-item.active .accordion-header span 
+.accordion-item.active .accordion-header i {
+  color: var(--bg);
+}
+
+.accordion-item.active .accordion-body {
+  display: flex;
+}
+
+
+
 
 /* css responsivo */
 /* min-width = a partir de --» */

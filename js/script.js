@@ -3,6 +3,7 @@
 /* const é o Objeto Icone para trocar a cor do site */
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
+const accordionHeader = document.querySelectorAll(".accordion-header");
 
 function changeTheme () {
 
@@ -17,3 +18,15 @@ function changeTheme () {
 }
 
     toggleTheme.addEventListener("click", changeTheme);
+
+    //Function acoordion
+    accordionHeader.forEach(header => {
+
+        header.addEventListener("click", () => {
+
+            const accordionItem = header.parentElement;
+            const accordionActive = accordionItem.classList.contains("active");
+
+            accordionActive ? accordionItem.classList.remove("active") : accordionItem.classList.add("active");
+        })
+    });
