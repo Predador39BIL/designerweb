@@ -68,14 +68,6 @@ DynaPuff:
   border: 1px;
 }
 
-a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
 
 html[data-theme='dark'] .logo1 {
   filter: invert(1);
@@ -88,6 +80,16 @@ html {
 body {
   background-color: var(--bg);
   color: var(--color);
+}
+
+a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+
+ul {
+  list-style: none;
 }
 
 h1 {
@@ -480,8 +482,7 @@ strong {
   background: var(--color);
 }
 
-.accordion-item.active .accordion-header span 
-.accordion-item.active .accordion-header i {
+.accordion-item.active .accordion-header span .accordion-item.active .accordion-header i {
   color: var(--bg);
 }
 
@@ -490,8 +491,77 @@ strong {
 }
 
 /* Contato */
+.contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid var(--color);
+  border-bottom: 1px solid var(--color);
+}
 
+.contato p {
+  text-align: justify;
+  margin-top: 50px;
+  font-size: 20px;
+  padding: 0 140px;
+}
 
+.contato span {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.menu-link:hover span,
+.menu-link:hover i {
+  color: var(--hover);
+}
+
+/* Forms */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  background: #989898;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.form-contato label {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Rozha One" sans-serif;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: var(--bg);
+  background: #d8d5d5;
+  border-radius: 6px;
+  border: 1px solid gray;
+  transition: 0.3 ease-in-out;
+  outline: none;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: var(--bg);
+  box-shadow: 0 0 5px black;
+}
+
+.form-contato textarea {
+  resize: vertical;
+  min-height: 120px;
+}
 
 
 /* Roda Pé */
@@ -549,7 +619,7 @@ footer a:hover {
   }
 
   #home,
-  .projetos {
+  .projetos .sobre {
     /* Atualização futura */
     padding: 128px 96px 64px;
 
@@ -616,8 +686,14 @@ footer a:hover {
 
 /* 1200 pixels */
 @media (min-width: 1200px) {
-  #home {
+
+  #home,
+  .sobre {
     padding: 160px 96px 32px;
+  }
+
+  h1 {
+    font-size: 80px;
   }
 
   h2 {
@@ -664,6 +740,16 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+
+  .sobre {
+    padding: 0 96px;
+  }
+
+  .sobre-perfil {
+    width: 50%;
+    margin-left: 25%;
     align-items: center;
   }
 
