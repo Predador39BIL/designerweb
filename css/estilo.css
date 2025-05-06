@@ -530,16 +530,17 @@ strong {
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
 }
 
 .form-contato label {
-  color: black;
+  color: #252525;
   font-size: 18px;
   font-weight: 600;
-  font-family: "Rozha One" sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
-.form-contato input,
+.form-contato input, 
 .form-contato textarea {
   width: 100%;
   padding: 12px;
@@ -547,15 +548,15 @@ strong {
   color: var(--bg);
   background: #d8d5d5;
   border-radius: 6px;
-  border: 1px solid gray;
-  transition: 0.3 ease-in-out;
+  border: 1px solid #cacaca; 
+  transition: 0.3s ease-in-out;
   outline: none;
 }
 
-.form-contato input:focus,
+.form-contato input:focus, 
 .form-contato textarea:focus {
   border-color: var(--bg);
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px #7c7c7c;
 }
 
 .form-contato textarea {
@@ -563,14 +564,13 @@ strong {
   min-height: 120px;
 }
 
-
 /* Roda Pé */
 footer {
   margin-bottom: 60px;
 }
 
 footer p {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   padding: 16px;
   font-family: "Inter", sans-serif;
@@ -580,14 +580,73 @@ footer a {
   color: #989898;
 }
 
-footer i:hover,
+footer i:hover, 
 footer a:hover {
   color: #05a2e5;
-  transition: ease-in-out .3s;
+  transition: ease-in-out .5s;
 }
 
-.contato .email {
-  color: yellow;
+
+/* Carousel */
+
+.carousel {
+  width: 80%;
+  max-height: 70vw;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  margin: 20px auto;
+
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.carousel input {
+  display: none;
+}
+
+#slide1:checked ~ .slides {transform: translateX(0);}
+#slide2:checked ~ .slides {transform: translateX(-33.33%);}
+#slide3:checked ~ .slides {transform: translateX(-66.66%);}
+
+.navigation {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.navigation label {
+  width: 12px;
+  height: 12px;
+  background: whitesmoke;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s;
+  opacity: 0.6;
+}
+
+.navigation label:hover,
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"]  {
+  background: red;
+  opacity: 1;
 }
 
 
